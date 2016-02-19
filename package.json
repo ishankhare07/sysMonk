@@ -5,15 +5,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "ishankhare07@gmail.com",
+  "license": "MIT",
   "dependencies": {
-    "electron": "^0.4.1",
     "electron-prebuilt": "^0.36.7",
-    "gulp-bower": "0.0.13",
-    "node-printer": "^1.0.2",
-    "printer": "^0.2.1"
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "testing conky alternative"
 }
