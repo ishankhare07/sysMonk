@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <title>Hello World!</title>
     <link type="text/css" rel="stylesheet" href="main.css">
-    <script type="text/javascript" src="js/bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="js/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <link type="text/css" rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
     <link type="text/css" rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+    <script>window.$ = window.jQuery = require('./js/bower_components/jquery/jquery.min.js');</script>
+    <script type="text/javascript" src="js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/bower_components/Chart.js/Chart.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/lib/controllers.js"></script>
+    <script type="text/javascript" src="js/lib/directives.js"></script>
+    <script type="text/javascript" src="js/lib/services.js"></script>
   </head>
   <body ng-app="sysMonk" class="transparent">
       <div class="container-fluid">
@@ -19,18 +23,26 @@
           </div>
 
           <div class="row">
-              <div class="col-xs-4">
+              <div class="col-xs-4" ng-controller="cpuController as cpuCtrl">
                   <div class="row">
-                      <canvas id="cpu1" width="100" height="100"></canvas>
+                      <div class="col-xs-12">
+                          <canvas id="cpu1" width="200" height="200"></canvas>
+                      </div>
                   </div>
                   <div class="row">
-                      <canvas id="cpu2" width="100" height="100"></canvas>
+                      <div class="col-xs-12">
+                          <canvas id="cpu2" width="200" height="200"></canvas>
+                      </div>
                   </div>
                   <div class="row">
-                      <canvas id="cpu3" width="100" height="100"></canvas>
+                      <div class="col-xs-12">
+                          <canvas id="cpu3" width="200" height="200"></canvas>
+                      </div>
                   </div>
                   <div class="row">
-                      <canvas id="cpu4" width="100" height="100"></canvas>
+                      <div class="col-xs-12">
+                          <canvas id="cpu4" width="200" height="200"></canvas>
+                      </div>
                   </div>
               </div>
               <div class="col-xs-8">
