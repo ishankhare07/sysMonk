@@ -1,0 +1,27 @@
+{
+  "name": "sysmonk",
+  "authors": [
+    "Ishan Khare <ishankhare07@gmail.com>"
+  ],
+  "description": "system monitor for the age of web",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "system-monitor"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.0",
+    "bootstrap": "^3.3.6",
+    "Chart.js": "^1.0.2"
+  }
+}
