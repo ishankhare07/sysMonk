@@ -4,7 +4,7 @@ var gulp = require('gulp')
 gulp.task('controllers', function() {
     return gulp.src('js/controllers/*.js')
         .pipe(concat('controllers.js'))
-        .pipe(gulp.dest('/js/lib'));
+        .pipe(gulp.dest('js/lib'));
 });
 
 gulp.task('directives', function() {
