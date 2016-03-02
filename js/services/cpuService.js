@@ -1,5 +1,4 @@
 angular.module('sysMonk').factory('cpuService', function($interval, $rootScope) {
-    const ipc = require('electron').ipcRenderer;
     const spawn  =require('child_process').spawn;
 
     this.cpus = {
