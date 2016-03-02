@@ -73,9 +73,8 @@ angular.module('sysMonk').controller('cpuController', function($scope, chartServ
 
     $scope.$on('cpu-update', function(event, cpuId) {
         var percent = cpuService.cpus[cpuId].value;
-        console.log(self.graphs[cpuId].chart.segments[0]);
         self.graphs[cpuId].chart.segments[0].value = percent;
-        self.graphs[cpuId].chart.segments[0].value = 100 - percent;
+        self.graphs[cpuId].chart.segments[1].value = 100 - percent;
         self.graphs[cpuId].chart.update();
     })
 });
