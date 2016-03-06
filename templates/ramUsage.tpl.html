@@ -1,0 +1,9 @@
+<div class="row" ng-controller="ramUsageController as ruc">
+    RAM
+    <div class="progress">
+      <div class="progress-bar progress-bar-success" role="progressbar"
+            ng-style="{'width': ruc.value + '%'}" ng-class="ruc.state">
+        {{ ruc.value }}%
+      </div>
+    </div>
+</div>
