@@ -23,5 +23,5 @@ cd js/
 ```
 * Run the monitor with `transparent visuals` and `harmony` flags
 ```shell
-./node_modules/electron_prebuilt/dist/electron --harmony --enable-transparent-visuals .
+npm start
 ```
