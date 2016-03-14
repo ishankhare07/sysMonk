@@ -19,7 +19,7 @@ git clone https://github.com/ishankhare07/sysMonk.git
 cd sysMonk
 npm install
 cd js/
-bower install; cd ..
+../node_modules/bower/bin/bower install; cd ..
 ```
 * Run the monitor with `transparent visuals` and `harmony` flags
 ```shell
