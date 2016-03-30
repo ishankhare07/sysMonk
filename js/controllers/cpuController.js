@@ -16,7 +16,7 @@ angular.module('sysMonk').controller('cpuController', function($scope, chartServ
             },
             {
                 value: 100,
-                color: "transparent"
+                color: "green"
             }
         ], this.options);
 
@@ -27,7 +27,7 @@ angular.module('sysMonk').controller('cpuController', function($scope, chartServ
             },
             {
                 value: 100,
-                color: "transparent"
+                color: "green"
             }
         ], this.options);
 
@@ -38,7 +38,7 @@ angular.module('sysMonk').controller('cpuController', function($scope, chartServ
             },
             {
                 value: 100,
-                color: "transparent"
+                color: "green"
             }
         ], this.options);
 
@@ -49,7 +49,7 @@ angular.module('sysMonk').controller('cpuController', function($scope, chartServ
             },
             {
                 value: 100,
-                color: "transparent"
+                color: "green"
             }
         ], this.options);
 
@@ -73,8 +73,10 @@ angular.module('sysMonk').controller('cpuController', function($scope, chartServ
 
     $scope.$on('cpu-update', function(event, cpuId) {
         var percent = cpuService.cpus[cpuId].value;
-        self.graphs[cpuId].chart.segments[0].value = percent;
-        self.graphs[cpuId].chart.segments[1].value = 100 - percent;
-        self.graphs[cpuId].chart.update();
+        if (percent) {                                  // avoid setting 0 percent on graph
+            self.graphs[cpuId].chart.segments[0].value = percent;
+            self.graphs[cpuId].chart.segments[1].value = 100 - percent;
+            self.graphs[cpuId].chart.update();
+        }
     })
 });
